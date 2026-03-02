@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="LOUIEGIE ROLDAN">
+  <title>The Author's Bucket List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body { 
+        background-image: url("https://starwalk.space/gallery/images/what-is-space/1540x866.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0; 
+        background-color: #1a0233; 
+        overflow-x: hidden; 
+        font-family: 'Montserrat', sans-serif; 
+        color: white; 
+        line-height: 1.6;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-box { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
+    
+    .bucket-container {
+        max-width: 1000px;
+        margin: 100px auto 50px auto;
+        padding: 0 20px;
+    }
+
+    .bucket-item {
+        display: flex;
+        align-items: center;
+        background: rgba(55, 6, 113, 0.4);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        margin-bottom: 30px;
+        padding: 35px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .bucket-item:hover {
+        transform: translateY(-5px);
+        background: rgba(70, 10, 140, 0.6);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .bucket-text {
+        flex: 1;
+        padding-right: 40px;
+    }
+
+    .bucket-text h3 {
+        margin: 0 0 10px 0;
+        font-size: 1.6rem;
+        color: #fff;
+    }
+
+    .bucket-text p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 400;
+    }
+
+    .img-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .bucket-image {
+        width: 220px;
+        height: 150px;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .ref-link {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.2s;
+    }
+
+    .ref-link:hover {
+        color: #b388ff;
+    }
+
+    @media (max-width: 768px) {
+        .bucket-item { flex-direction: column; text-align: center; }
+        .bucket-text { padding-right: 0; margin-bottom: 20px; }
+        .bucket-image { width: 100%; height: 200px; }
+    }
+
+    nav {
+        background-color: rgba(55, 6, 113, 0.85);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 70px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+
+<body> 
+  <nav>
+    <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 40px;">
+      <li><a href="../index.html" style="color: white; text-decoration: none; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Home</a></li>
+    </ul>
+  </nav>
+
+  <div class="bucket-container">
+    <header class="animate-box" style="text-align: center; margin-bottom: 60px;">
+        <h1 style="font-size: 3.5rem; margin-bottom: 10px;">The Author's Bucket List</h1>
+    </header>
+
+    <div class="bucket-item animate-box" style="animation-delay: 0.1s;">
+        <div class="bucket-text">
+            <h3>Leave a good legacy</h3>
+            <p>I want to leave behind something that matters. Not just a name in history, but a positive impact that people can feel and remember long after I'm gone.</p>
+        </div>
+        <div class="img-wrapper">
+            <img src="https://s3.duellinksmeta.com/img/masterduel/articles/sets/legacy-pack.webp" class="bucket-image" alt="Legacy">
+            <a href="https://s3.duellinksmeta.com/img/masterduel/articles/sets/legacy-pack.webp" target="_blank" class="ref-link">Image Source</a>
+        </div>
+    </div>
+
+    <div class="bucket-item animate-box" style="animation-delay: 0.2s;">
+        <div class="bucket-text">
+            <h3>Learn a lot of skills</h3>
+            <p>I want to be the person that can be anything, a jack of all trades. Being versatile makes life more interesting and less intimidating.</p>
+        </div>
+        <div class="img-wrapper">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*RKl1cYzi0oFXLmXwMuhfSQ.png" class="bucket-image" alt="Skills">
+            <a href="https://miro.medium.com/v2/resize:fit:1400/1*RKl1cYzi0oFXLmXwMuhfSQ.png" target="_blank" class="ref-link">Image Source</a>
+        </div>
+    </div>
+
+    <div class="bucket-item animate-box" style="animation-delay: 0.3s;">
+        <div class="bucket-text">
+            <h3>Become someone that anyone would admire</h3>
+            <p>I want to be the kind of person that others look up to. Not because of what they do, but because of how they treat others and the values they uphold.</p>
+        </div>
+        <div class="img-wrapper">
+            <img src="https://media.tenor.com/DPOrEmLbL1oAAAAM/markiplier.gif" class="bucket-image" alt="Admire">
+            <a href="https://media.tenor.com/DPOrEmLbL1oAAAAM/markiplier.gif" target="_blank" class="ref-link">Image Source</a>
+        </div>
+    </div>
+
+    <div class="bucket-item animate-box" style="animation-delay: 0.4s;">
+        <div class="bucket-text">
+            <h3>Make a good game that everyone would enjoy</h3>
+            <p>I love the idea of creating a game that brings people together. Whether it's a cooperative experience or a competitive one, I want to build something that makes people laugh, think, and connect.</p>
+        </div>
+        <div class="img-wrapper">
+            <img src="https://static.wikia.nocookie.net/megamitensei/images/f/ff/Persona_3_Reload_Cover_Logoless.jpg/revision/latest/scale-to-width-down/1200?cb=20240514034415" class="bucket-image" alt="Gaming">
+            <a href="https://static.wikia.nocookie.net/megamitensei/images/f/ff/Persona_3_Reload_Cover_Logoless.jpg" target="_blank" class="ref-link">Image Source</a>
+        </div>
+    </div>
+
+    <div class="bucket-item animate-box" style="animation-delay: 0.5s;">
+        <div class="bucket-text">
+            <h3>Teach someone that would eventually outgrow me</h3>
+            <p>I want to be the kind of person who helps others grow beyond what I ever thought possible. It's not about being the best; it's about being the one who helps others become better than they ever imagined.</p>
+        </div>
+        <div class="img-wrapper">
+            <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2023/09/ff7-ever-crisis-cloud-zack.jpg?q=50&fit=contain&w=750&h=422&dpr=1.5" class="bucket-image" alt="Teaching">
+            <a href="https://static0.srcdn.com/wordpress/wp-content/uploads/2023/09/ff7-ever-crisis-cloud-zack.jpg" target="_blank" class="ref-link">Image Source</a>
+        </div>
+    </div>
+
+    <div class="bucket-item animate-box" style="animation-delay: 0.6s;">
+        <div class="bucket-text">
+            <h3>Be successful in life</h3>
+            <p>Success is not just about reaching a goal; it's about the journey and the growth that comes with it. I want to be successful in a way that makes me proud of who I've become and what I've accomplished.</p>
+        </div>
+        <div class="img-wrapper">
+            <img src="https://preview.redd.it/in-the-last-week-i-have-seen-in-this-sub-this-meme-more-v0-wwdbtuztbwta1.jpg?width=640&crop=smart&auto=webp&s=56fbd9454281c2a58bb2995208ab5c5dc2c04884" class="bucket-image" alt="Success">
+            <a href="https://preview.redd.it/in-the-last-week-i-have-seen-in-this-sub-this-meme-more-v0-wwdbtuztbwta1.jpg" target="_blank" class="ref-link">Image Source</a>
+        </div>
+    </div>
+
+    <div class="bucket-item animate-box" style="animation-delay: 0.7s;">
+        <div class="bucket-text">
+            <h3>Have a lot of money</h3>
+            <p>I want to be financially secure so that I can focus on what truly matters. Money isn't the end goal, but it's a tool that gives me freedom to pursue my passions and support the people I care about.</p>
+        </div>
+        <div class="img-wrapper">
+            <img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-30-at-7.21.50-PM.jpg" class="bucket-image" alt="Wealth">
+            <a href="https://bleedingcool.com/wp-content/uploads/2020/07/Screen-Shot-2020-07-30-at-7.21.50-PM.jpg" target="_blank" class="ref-link">Image Source</a>
+        </div>
+    </div>
+
+    <div class="bucket-item animate-box" style="animation-delay: 0.8s;">
+        <div class="bucket-text">
+            <h3>Travel around the world</h3>
+            <p>I want to see the world from different perspectives. Whether it's the bustling streets of Tokyo, the serene landscapes of New Zealand, or the vibrant culture of Morocco, I want to experience it all.</p>
+        </div>
+        <div class="img-wrapper">
+            <img src="https://i.pinimg.com/564x/0b/8c/19/0b8c1927beb7ee0f6775d6697ee1288b.jpg" class="bucket-image" alt="Travel">
+            <a href="https://i.pinimg.com/564x/0b/8c/19/0b8c1927beb7ee0f6775d6697ee1288b.jpg" target="_blank" class="ref-link">Image Source</a>
+        </div>
+    </div>
+
+    <div class="bucket-item animate-box" style="animation-delay: 0.9s;">
+        <div class="bucket-text">
+            <h3>Taste new foods</h3>
+            <p>I want to explore the world through its cuisine. From the spicy flavors of Thailand to the rich pastries of France, I want to savor every bite and discover new tastes that broaden my horizons.</p>
+        </div>
+        <div class="img-wrapper">
+            <img src="https://i.ytimg.com/vi/bYmDXBwHIiM/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGHIgVyg-MA8=&rs=AOn4CLB_v32_LdRa_6mMgodD12DvwaBOVg" class="bucket-image" alt="Food">
+            <a href="https://i.ytimg.com/vi/bYmDXBwHIiM/hq720.jpg" target="_blank" class="ref-link">Image Source</a>
+        </div>
+    </div>
+
+    <div class="bucket-item animate-box" style="animation-delay: 1.0s;">
+        <div class="bucket-text">
+            <h3>Be happy</h3>
+            <p>I want to find joy in the simple things and be content with who I am. Happiness isn't a destination but a way of living that comes from appreciating life's moments and being grateful for what I have.</p>
+        </div>
+        <div class="img-wrapper">
+            <img src="https://gametora.com/images/umamusume/supports/tex_support_card_30019.png" class="bucket-image" alt="Happiness">
+            <a href="https://gametora.com/images/umamusume/supports/tex_support_card_30019.png" target="_blank" class="ref-link">Image Source</a>
+        </div>
+    </div>
+  </div>
+
+  <footer style="text-align: center; padding: 60px; color: rgba(255,255,255,0.4); font-size: 12px;">
+    &copy; 2026 Louiegie Roldan | Bucket List
+  </footer>
+</body>
+</html>

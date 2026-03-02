@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="LOUIEGIE ROLDAN">
+  <title>Louiegie's Dream Destinations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body { 
+      background-image: url("https://starwalk.space/gallery/images/what-is-space/1540x866.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      margin: 0; 
+      background-color: #1a0233; 
+      overflow-x: hidden; 
+      font-family: 'Montserrat', sans-serif; 
+      color: white; 
+    }
+
+    nav ul li a { position: relative; transition: all 0.3s ease; }
+    nav ul li a:hover { color: #d1d1d1 !important; }
+    nav ul li a::after {
+      content: ''; position: absolute; width: 0; height: 2px;
+      bottom: -5px; left: 0; background-color: white; transition: width 0.3s ease;
+    }
+    nav ul li a:hover::after { width: 100%; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-box { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
+    .delay-1 { animation-delay: 0.2s; }
+
+    .collage-container { 
+        text-align: center; 
+        background: rgba(55, 6, 113, 0.5); 
+        padding: 20px; 
+        border-radius: 15px; 
+        border: 1px solid rgba(255,255,255,0.1);
+        margin: 20px auto;
+        max-width: 1024px;
+    }
+    
+    .modal-overlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        text-decoration: none;
+        cursor: default;
+    }
+
+    .modal-overlay:target { display: flex; }
+
+    .info-section { 
+        background: rgba(55, 6, 113, 0.95); 
+        padding: 30px; 
+        border-radius: 15px; 
+        border-left: 5px solid #fff; 
+        max-width: 600px;
+        width: 90%;
+        position: relative;
+        cursor: auto;
+        animation: fadeInUp 0.4s ease-out;
+    }
+
+    .close-area {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+    }
+
+    .dest-img { width: 100%; max-height: 400px; object-fit: cover; margin-top: 15px; border-radius: 8px; }
+    .nav-hint { font-style: italic; color: rgba(255,255,255,0.6); text-align: center; margin-bottom: 10px; }
+    h1 { text-align: center; font-size: 2.5rem; margin-top: 40px; }
+    .close-x { position: absolute; top: 10px; right: 20px; font-size: 30px; color: white; text-decoration: none; }
+    
+    .modal-ref {
+        display: block;
+        margin-top: 15px;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+    }
+    .modal-ref:hover { color: #fff; }
+
+    .ref-list-section {
+        margin: 40px auto;
+        padding: 30px;
+        max-width: 800px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        font-size: 13px;
+    }
+    .ref-list-section a { color: #b388ff; text-decoration: none; }
+  </style>
+</head>
+
+<body> 
+  <nav style="background-color: rgba(55, 6, 113, 0.85); backdrop-filter: blur(10px); position: fixed; top: 0; left: 0; width: 100%; height: 70px; z-index: 9999; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+    <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 40px; align-items: center;">
+      <li><a href="../index.html" style="color: white; text-decoration: none; font-size: 15px; font-weight: 500;">Home</a></li>
+    </ul>
+  </nav>
+
+  <main style="padding-top: 90px; padding-bottom: 50px;">
+    
+    <div class="animate-box delay-1">
+        <h1>My Dream Travel Collage</h1>
+    </div>
+
+   <div class="collage-container">
+        <img src="MDD.png" usemap="#travelmap" width="100%" alt="Travel Collage">
+        <map name="travelmap">
+            <area alt="France" title="France" href="#france" coords="223,348,146" shape="circle">
+            <area alt="Japan" title="Japan" href="#japan" coords="599,198,964,436" shape="rect">
+            <area alt="Italy" title="Italy" href="#italy" coords="71,613,214,959,468,784" shape="poly">
+            <area alt="Switzerland" title="Switzerland" href="#switzerland" coords="321,535,381,451,637,451,701,519,683,635,563,708,439,711,345,650" shape="poly">
+            <area alt="Germany" title="Germany" href="#germany" coords="560,854,641,693,827,658,925,844,901,933,824,953,607,941" shape="poly">
+        </map>
+    </div>
+
+    <div id="france" class="modal-overlay">
+        <a href="#" class="close-area"></a>
+        <div class="info-section">
+            <a href="#" class="close-x">&times;</a>
+            <h2>France</h2>
+            <p>France is known for its rich culture, art, and cuisine. I want to visit to wander Parisian streets, visit the Louvre, and see the Eiffel Tower in person.</p>
+            <img src="https://i.natgeofe.com/k/04665f4a-3f8d-4b62-8ca3-09ce7dfc5a20/france-eiffel-tower_4x3.jpg" class="dest-img" alt="France">
+            <a href="https://i.natgeofe.com/k/04665f4a-3f8d-4b62-8ca3-09ce7dfc5a20/france-eiffel-tower_4x3.jpg" target="_blank" class="modal-ref">Source: National Geographic</a>
+        </div>
+    </div>
+
+    <div id="japan" class="modal-overlay">
+        <a href="#" class="close-area"></a>
+        <div class="info-section">
+            <a href="#" class="close-x">&times;</a>
+            <h2>Japan</h2>
+            <p>Japan offers a unique blend of traditional culture and modern innovation. I hope to visit temples in Kyoto and see Mt. Fuji during cherry blossom season.</p>
+            <img src="https://res.klook.com/image/upload/q_85/c_fill,w_650,h_345/v1674030135/blog/bnbtltnp5nqbdevfcbmn.jpg" class="dest-img" alt="Japan">
+            <a href="https://res.klook.com/image/upload/v1674030135/blog/bnbtltnp5nqbdevfcbmn.jpg" target="_blank" class="modal-ref">Source: Klook</a>
+        </div>
+    </div>
+
+    <div id="italy" class="modal-overlay">
+        <a href="#" class="close-area"></a>
+        <div class="info-section">
+            <a href="#" class="close-x">&times;</a>
+            <h2>Italy</h2>
+            <p>Italy is famous for its art and history. The Colosseum in Rome is a dream destination of mine to see ancient Roman engineering firsthand.</p>
+            <img src="https://assets.vogue.com/photos/65f04d926294babad5413eb1/master/w_2560%2Cc_limit/GettyImages-1380534040.jpg" class="dest-img" alt="Italy">
+            <a href="https://assets.vogue.com/photos/65f04d926294babad5413eb1/master/w_2560%2Cc_limit/GettyImages-1380534040.jpg" target="_blank" class="modal-ref">Source: Vogue</a>
+        </div>
+    </div>
+
+    <div id="switzerland" class="modal-overlay">
+        <a href="#" class="close-area"></a>
+        <div class="info-section">
+            <a href="#" class="close-x">&times;</a>
+            <h2>Switzerland</h2>
+            <p>Switzerland is renowned for its stunning landscapes. I want to hike the Swiss Alps and enjoy the crystal-clear alpine lakes.</p>
+            <img src="https://www.internationalcitizens.com/wp-content/uploads/2021/04/Thun-Switzerland-with-Swiss-alps-scaled.jpg" class="dest-img" alt="Switzerland">
+            <a href="https://www.internationalcitizens.com/wp-content/uploads/2021/04/Thun-Switzerland-with-Swiss-alps-scaled.jpg" target="_blank" class="modal-ref">Source: International Citizens</a>
+        </div>
+    </div>
+
+    <div id="germany" class="modal-overlay">
+        <a href="#" class="close-area"></a>
+        <div class="info-section">
+            <a href="#" class="close-x">&times;</a>
+            <h2>Germany</h2>
+            <p>Germany is rich in history and fairy-tale architecture. Neuschwanstein Castle is a must-see for its incredible views and history.</p>
+            <img src="https://d3dqioy2sca31t.cloudfront.net/Projects/cms/production/000/031/401/article/578155ed0242d97af7ff9c8e1d9423fd/article-germany-rhine-bacharach-evening.jpg" class="dest-img" alt="Germany">
+            <a href="https://d3dqioy2sca31t.cloudfront.net/Projects/cms/production/000/031/401/article/578155ed0242d97af7ff9c8e1d9423fd/article-germany-rhine-bacharach-evening.jpg" target="_blank" class="modal-ref">Source: Cloudfront</a>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 60px; color: rgba(255,255,255,0.4); font-size: 12px;">
+      &copy; 2026 Louiegie Roldan | Dream Destinations
+    </footer>
+  </main>
+</body>
+</html>
